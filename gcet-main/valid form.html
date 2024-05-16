@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function validate(){
+        var ph=document.myform.ph.value;
+        var regex=/^[7-9][0-9]{9}$/;
+        if(ph.match(regex)){
+            alert("valid phone no");
+            return true;
+        }
+
+        else{
+            alert("Invalid phone no");
+            return false;
+        }
+    }
+</script>
+<body>
+
+    <form name="myform" onsubmit="return validate()">
+        Phone:<input type="number" name="ph">
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
